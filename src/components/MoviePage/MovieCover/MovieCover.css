@@ -1,0 +1,25 @@
+.moviepage__cover{
+    object-fit: contain;
+    width: 100%;
+    padding-top: 420px;
+   
+}
+.moviepage__fadeBottom{
+    height: 7.4rem;
+    background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(37,37,37,0.61),
+        #111
+        );
+}
+
+@media only screen and (max-width:600px) {
+    .moviepage__cover{
+        padding-top: 100px;
+       
+    }
+    .moviepage__fadeBottom{
+        height: 7.4rem;
+    }
+}

@@ -1,0 +1,36 @@
+.moviedetails{
+    padding-left: 3rem;
+}
+.moviedetails__title{
+    font-weight: 800;
+}
+.moviedetails_description{
+    max-width: 50rem;
+}
+.moviedetails__simple-details{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap
+}
+.moviedetails__rating{
+    padding: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    font-size: 2rem;
+}
+.moviedetails__tags{
+    background-color: gray;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 5px 10px 15px #000000;
+    border-radius: 0.2rem;
+}
+@media only screen and (max-width:600px){
+    .moviedetails{
+        padding-left: 1rem;
+    }
+    
+}

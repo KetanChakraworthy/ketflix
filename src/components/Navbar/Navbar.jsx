@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ketflixLogo from '../../img/ketflix-logo.png';
 import ketflixAvatar from '../../img/ketflix-avatar.png';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
 
@@ -17,14 +18,20 @@ export default function Navbar() {
   }, [])
   return (
     <nav className={`navbar ${isScroll && 'navbar__black'}`} >
-      <img
-        className='navbar__logo'
-        src={ ketflixLogo }
-        alt="Ketflix-Logo" />
-      <img
-        className='navbar__avatar'
-        src={ ketflixAvatar }
-        alt="KetflixAvatar" />
+      <Link to='/'>
+        <img
+          className='navbar__logo'
+          src={ ketflixLogo }
+          alt="Ketflix-Logo"
+        />
+      </Link>
+      <div className="navbar__menu">
+        <img
+          className='navbar__avatar'
+          src={ ketflixAvatar }
+          alt="KetflixAvatar"
+        />
+      </div>
     </nav>
   )
 }
