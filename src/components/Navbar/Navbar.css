@@ -26,3 +26,8 @@
     position: fixed;
     right: 1rem;
 }
+@media only screen and (max-width : 600px){
+    .navbar__avatar{
+        right:1.5rem;
+    }
+}

@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from '../../../api/index';
 import requests from '../../../api/requests';
+import { useNavigate } from 'react-router-dom';
 import './Banner.css'
 
 export default function Banner() {
     const [movie, setMovie] = useState({});
     const baseUrl = 'http://image.tmdb.org/t/p/original';
-
+    const navigate = useNavigate();
+    
     useEffect(() => {
         async function fetchData() {
             const { data: { results } } = await axios.get(requests.fetchTrending);
@@ -21,6 +23,9 @@ export default function Banner() {
     function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + '...' : str;
     }
+    const handleClick = (movie) => {
+        navigate(`/${movie?.media_type ? movie?.media_type : 'show'}/${movie?.id}`, { state: movie });
+    }
     
   return (
       <header
@@ -33,7 +38,7 @@ export default function Banner() {
           <div className="banner__contents">
               <h1 className='banner__title'>{movie?.title || movie?.name || movie?.original_name}</h1>
               <div className="banner__buttons">
-                  <button className="banner__button">Play</button>
+                  <button className="banner__button" onClick={() => handleClick(movie)}>Play</button>
                   <button className="banner__button">My List</button>
               </div>
               <h1 className="banner__description">{truncate(movie.overview, 150)}</h1>
