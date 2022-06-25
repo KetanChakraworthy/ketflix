@@ -26,11 +26,16 @@ export default function Navbar() {
         />
       </Link>
       <div className="navbar__menu">
-        <img
-          className='navbar__avatar'
-          src={ ketflixAvatar }
-          alt="KetflixAvatar"
-        />
+        <Link to='/about'><div className="navbar__menuItem">About</div></Link>
+        <Link to='/'>
+          <div className='navbar__menuItem'>
+            <img
+              className='navbar__avatar'
+              src={ ketflixAvatar }
+              alt="KetflixAvatar"
+            />
+          </div>
+        </Link>
       </div>
     </nav>
   )

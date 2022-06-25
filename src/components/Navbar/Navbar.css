@@ -1,9 +1,8 @@
 .navbar{
     z-index: 1;
     position: fixed;
-    top: 0;
-    width: 100%;
     height: 30px;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
@@ -17,17 +16,28 @@
 .navbar__logo{
     object-fit: contain;
     width: 80px;
-    position: fixed;
-    left: 1rem;
 }
 .navbar__avatar{
     object-fit: contain;
     width: 30px;
-    position: fixed;
-    right: 1rem;
 }
-@media only screen and (max-width : 600px){
-    .navbar__avatar{
-        right:1.5rem;
-    }
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.navbar__menu > a{
+    text-decoration: none;
+    color: white;
+}
+.navbar__menuItem{
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+.navbar__menuItem:hover{
+    background-color: white;
+    color: #111;
+
 }

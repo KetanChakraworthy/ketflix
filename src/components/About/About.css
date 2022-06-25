@@ -1,0 +1,64 @@
+.about{
+    width: 100%;
+    height:100vh;
+    color: white;
+}
+.about__gradient{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about__container{
+    background-color: rgba(0, 0, 0, 0.6);
+    height: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.about__container::-webkit-scrollbar{
+    display: none;
+}
+.about__logoContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.about__logo{
+    object-fit: contain;
+    max-width: 10rem;
+}
+.about__description{
+    max-width: 40rem;
+    text-align: center;
+}
+.about__info{
+    max-width: 40rem;
+    text-align: center;
+
+}
+.about__react-logo{
+    object-fit: contain;
+    max-width: 5rem;
+    animation: rotate 5s linear infinite;
+    
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width:400px) {
+    .about__container{
+        width: 60%;
+        height: 75vh;
+    }
+    
+}
