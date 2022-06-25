@@ -4,12 +4,14 @@ import About from './components/About/About';
 import Home from './components/Home/Home';
 import MoviePage from './components/MoviePage/MoviePage';
 import Navbar from './components/Navbar/Navbar'
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Routes>
+        <Route path='*' exact element={<NotFound />} />
         <Route path='/' exact element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/movie/:id' exact element={<MoviePage />} />
