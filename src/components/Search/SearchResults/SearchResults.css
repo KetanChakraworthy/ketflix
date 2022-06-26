@@ -1,0 +1,24 @@
+
+.search__resultsList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    padding: 1rem;
+}
+.search__imageWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.search__result{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 400px;
+    transition: transform 450ms;
+}
+.search__result:hover{
+    transform: scale(1.1);
+}
