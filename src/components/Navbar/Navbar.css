@@ -21,6 +21,12 @@
     object-fit: contain;
     width: 30px;
 }
+.navbar__searchIcon{ 
+    fill:white;
+}
+.navbar__searchIcon:hover{ 
+    fill: black;
+}
 .navbar__menu{
     display: flex;
     align-items: center;
@@ -39,5 +45,4 @@
 .navbar__menuItem:hover{
     background-color: white;
     color: #111;
-
 }

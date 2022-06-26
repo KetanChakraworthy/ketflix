@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ketflixLogo from '../../img/ketflix-logo.png';
 import ketflixAvatar from '../../img/ketflix-avatar.png';
+import { ReactComponent as SearchIcon } from '../../img/search-icon.svg';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
@@ -26,6 +27,12 @@ export default function Navbar() {
         />
       </Link>
       <div className="navbar__menu">
+        <Link to='/search'>
+          <div className="navbar__menuItem">
+            <SearchIcon className='navbar__searchIcon'
+              style={{ height: 25, width: 25 }} />
+          </div>
+        </Link>
         <Link to='/about'><div className="navbar__menuItem">About</div></Link>
         <Link to='/'>
           <div className='navbar__menuItem'>
