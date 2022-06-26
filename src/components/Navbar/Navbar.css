@@ -46,3 +46,6 @@
     background-color: white;
     color: #111;
 }
+.navbar__menuItem:hover > .navbar__searchIcon{
+    fill: black;
+}
