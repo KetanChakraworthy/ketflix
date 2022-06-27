@@ -1,0 +1,45 @@
+.person{
+    color: white;
+}
+.person__profileDetails{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 2rem;
+}
+.person__profile{
+    object-fit: contain;
+    width: 250px;
+}
+.person__profileDetail{
+    width: 50rem;
+}
+.person__bio{
+    max-width: 45rem;
+}
+.person__knowFor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    padding: 1rem;
+}
+.person__imageWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.person__result{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 400px;
+    transition: transform 450ms;
+}
+.person__result:hover{
+    transform: scale(1.1);
+}
