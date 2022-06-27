@@ -10,6 +10,7 @@ export default function Search() {
     const [searchTerm, setSearchTerm] = useState('');
     const [type, setType] = useState('movie');
     const [searchResults, setSearchResults] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     //handle Functions
     const handleInputChange = (e) => {
@@ -20,9 +21,11 @@ export default function Search() {
     }
     const handleSubmit = async(e) => {
         e.preventDefault();
+        setLoading(true);
         const query = searchTerm.replace(/\s+/g, '+');
         const { data: { results} } = await axios(requests.searchByType(type, query));
         setSearchResults(results);
+        setLoading(false);
     }
     return (
         <main className='search'>
@@ -37,6 +40,7 @@ export default function Search() {
                 type={type}
                 searchTerm={searchTerm}
                 searchResults={searchResults}
+                loading={loading}
             />
         </main>
   )

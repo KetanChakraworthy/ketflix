@@ -3,6 +3,9 @@ import { ReactComponent as SearchIcon } from '../../../img/search-icon.svg';
 import './SearchForm.css';
 
 export default function SearchForm({ handleInputChange, handleSelectChange, handleSubmit, searchTerm, type }) {
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
     return (
         <form className="search__container" onSubmit={handleSubmit}>
             <select name="type" onChange={handleSelectChange} className='search__type'>
@@ -14,7 +17,7 @@ export default function SearchForm({ handleInputChange, handleSelectChange, hand
             <input
                 className='search__input'
                 type="text"
-                placeholder='Search...Movies\TvShow\Cast'
+                placeholder={`Search...${capitalizeFirstLetter(type)}`}
                 value={searchTerm}
                 onChange={handleInputChange}
             />
