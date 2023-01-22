@@ -49,7 +49,7 @@ export default function MovieRow({ title, fetchUrl, isLarge }) {
                   onClick={() => handleClick(movie)}
                 />
               );
-            }
+            } else return "";
           })
         ) : (
           <h2 style={{ textAlign: "center", width: "100%" }}>Stay tuned...</h2>
